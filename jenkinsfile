@@ -1,4 +1,3 @@
-/*PIPELINE SCRIPTS */
 
 node {
     def attachments = [
@@ -19,7 +18,6 @@ node {
 
 
 
-/*THREAD CREATION*/
 
 node {
 def attachments = [
@@ -34,7 +32,17 @@ def attachments = [
 			
         ]
     ]   
-   def slackResponse = slackSend(channel: "newthread01", attachments: attachments, tokenCredentialId: "thread", message: "Here is the primary 0102")
+   def slackResponse = slackSend(channel: "newthread02", attachments: attachments, tokenCredentialId: "thread", message: "Here is the primary 0102")
     slackSend(channel: slackResponse.threadId, message: "Thread reply #1")
     slackSend(channel: slackResponse.threadId, message: "Thread reply #2")
+}
+
+
+
+ stage('Slack Notifications')
+ {
+	slackSend(channel: 'CJUAQTJQG:1558352808.005600',
+	message:'changed message for thread replay', 
+	tokenCredentialId: 'thread'
+	)
 }
