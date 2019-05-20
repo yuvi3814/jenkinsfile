@@ -42,7 +42,7 @@ def attachments = [
  stage('Slack Notifications')
  {
 	slackSend(channel: 'CJUAQTJQG:1558352808.005600',
-	message:'changed message for thread replay', 
+	message:'changed message for t4632643643hread replay', 
 	tokenCredentialId: 'thread'
 	)
 }
