@@ -1,0 +1,40 @@
+/*PIPELINE SCRIPTS */
+
+node {
+    def attachments = [
+        [
+           pretext: 'jenkins message with Attachement01201031',
+            fallback: 'Message from jenkins.',
+            color: '#36a64f',
+			 text: 'View the above file',
+			author_name: 'Author: Yuvi Kun',
+			title: 'Slack API documentation',
+			title_link: 'https://api.slack.com/',
+			
+        ]
+    ]
+
+    slackSend(channel: '#jenkins-pipeline-01', baseUrl: "https://hooks.slack.com/services/", tokenCredentialId: 'jenkins-pipeline-01', attachments: attachments)
+}
+
+
+
+/*THREAD CREATION*/
+
+node {
+def attachments = [
+        [
+           pretext: 'jenkins message with Attachement01201031',
+            fallback: 'Message from jenkins.',
+            color: '#36a64f',
+			 text: 'View the above file',
+			author_name: 'Author: Yuvi Kun',
+			title: 'Slack API documentation',
+			title_link: 'https://api.slack.com/',
+			
+        ]
+    ]   
+   def slackResponse = slackSend(channel: "newthread01", attachments: attachments, tokenCredentialId: "thread", message: "Here is the primary 0102")
+    slackSend(channel: slackResponse.threadId, message: "Thread reply #1")
+    slackSend(channel: slackResponse.threadId, message: "Thread reply #2")
+}
