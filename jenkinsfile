@@ -12,7 +12,11 @@ node {
         ]
     ]
 
-    slackSend(channel: '#jenkins-pipeline-01', baseUrl: "https://hooks.slack.com/services/", tokenCredentialId: 'jenkins-pipeline-01', attachments: attachments)
+    slackSend(channel: '#jenkins-pipeline-01', 
+    baseUrl: "https://hooks.slack.com/services/", 
+    tokenCredentialId: 'jenkins-pipeline-01', 
+    attachments: attachments
+    )
 }
 
 
@@ -21,19 +25,23 @@ node {
 node {
 def attachments = [
         [
-           pretext: 'jenkins message with Attachement01201031',
-            fallback: 'Message from jenkins.',
+           pretext: 'jenkins message with Attachement53031275093275032',
+            fallback: 'Message from jenkinsfile.',
             color: '#36a64f',
 			 text: 'View the above file',
-			author_name: 'Author: Yuvi Kun',
+			author_name: 'Author: Yuvi_Kun',
 			title: 'Slack API documentation',
 			title_link: 'https://api.slack.com/',
 			
         ]
     ]   
-   def slackResponse = slackSend(channel: "newthread02", attachments: attachments, tokenCredentialId: "thread", message: "Here is the primary 0102")
-    slackSend(channel: slackResponse.threadId, message: "Thread reply #1")
-    slackSend(channel: slackResponse.threadId, message: "Thread reply #2")
+   def slackResponse = slackSend(channel: "newthread02", 
+   attachments: attachments, 
+   tokenCredentialId: "thread", 
+   message: "Here is the new message today")
+   
+    slackSend(channel: slackResponse.threadId, message: "Thread reply 1010101")
+    slackSend(channel: slackResponse.threadId, message: "Thread reply #23232323232")
 }
 
 
