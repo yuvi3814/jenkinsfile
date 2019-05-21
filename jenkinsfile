@@ -12,9 +12,8 @@ node {
         ]
     ]
 
-    slackSend(channel: '#jenkins-pipeline-01', 
-    baseUrl: "https://hooks.slack.com/services/", 
-    tokenCredentialId: 'jenkins-pipeline-01', 
+    slackSend(channel: '#jenkins-pipeline-02', 
+    tokenCredentialId: 'thread', 
     attachments: attachments
     )
 }
