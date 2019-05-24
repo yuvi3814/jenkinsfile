@@ -1,6 +1,6 @@
 
- node
+ node {
 def slackresponse = slackSend(channel: "#newethread01",
 	message: "kdwnvourwnvoiwrbnbnrwkbnrwbnurwinvoiew",
-	tokenCredentialId: 'usertoken'
+	tokenCredentialId: 'usertoken')
 }
