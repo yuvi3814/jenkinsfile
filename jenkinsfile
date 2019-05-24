@@ -12,7 +12,7 @@ node {
         ]
     ]
 
-    slackSend(channel: '#jenkins-pipeline-02', 
+    slackSend(channel: '#jenkins-pipeline-01', 
     tokenCredentialId: 'usertoken', 
     attachments: attachments
     )
@@ -34,7 +34,7 @@ def attachments = [
 			
         ]
     ]   
-   def slackResponse = slackSend(channel: "newthread02", 
+   def slackResponse = slackSend(channel: "newthread01", 
    attachments: attachments, 
    tokenCredentialId: "usertoken", 
    message: "Here is the new message today")
