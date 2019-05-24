@@ -50,7 +50,7 @@ def attachments = [
 
 stage('Slack Notifications')
  {
-	slackSend(channel: 'newthread01',
+	slackSend(channel: 'newthread04',
 	message:'changed message from user yuvaraj for newthread01 channel', 
 	tokenCredentialId: 'usertoken'
 	)
