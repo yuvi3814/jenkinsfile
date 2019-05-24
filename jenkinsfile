@@ -2,6 +2,6 @@
  {
 	slackSend(channel: 'newthread01',
 	message:'changed message for thread replay', 
-	tokenCredentialId: 'thread'
+	tokenCredentialId: 'usertoken'
 	)
 }
