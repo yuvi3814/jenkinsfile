@@ -13,7 +13,7 @@ node {
     ]
 
     slackSend(channel: '#jenkins-pipeline-02', 
-    tokenCredentialId: 'thread', 
+    tokenCredentialId: 'usertoken', 
     attachments: attachments
     )
 }
@@ -36,7 +36,7 @@ def attachments = [
     ]   
    def slackResponse = slackSend(channel: "newthread02", 
    attachments: attachments, 
-   tokenCredentialId: "thread", 
+   tokenCredentialId: "usertoken", 
    message: "Here is the new message today")
    
     slackSend(channel: slackResponse.threadId, message: "Thread reply 1010101")
@@ -47,8 +47,8 @@ def attachments = [
 
  stage('Slack Notifications')
  {
-	slackSend(channel: 'CJUAQTJQG:1558352808.005600',
+	slackSend(channel: 'newethread01',
 	message:'changed message for t4632643643hread replay', 
-	tokenCredentialId: 'thread'
+	tokenCredentialId: 'usertoken'
 	)
 }
