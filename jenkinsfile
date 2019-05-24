@@ -2,6 +2,6 @@
  stage('Slack Notifications')
  {
 	slackSend channel: '#newethread01',
-	message: 'kdwnvourwnvoiwrbnbnrwkbnrwbnurwinvoiew',
+	text: 'kdwnvourwnvoiwrbnbnrwkbnrwbnurwinvoiew',
 	tokenCredentialId: 'usertoken'
 }
