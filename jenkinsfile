@@ -1,6 +1,7 @@
-
- node {
-def slackresponse = slackSend(channel: "#newethread01",
-	message: "kdwnvourwnvoiwrbnbnrwkbnrwbnurwinvoiew",
-	tokenCredentialId: 'usertoken')
+ stage('Slack Notifications')
+ {
+	slackSend(channel: 'newthread01',
+	message:'changed message for thread replay', 
+	tokenCredentialId: 'thread'
+	)
 }
