@@ -1,7 +1,6 @@
 
- stage('Slack Notifications')
- {
-	slackSend channel: '#newethread01',
-	text: 'kdwnvourwnvoiwrbnbnrwkbnrwbnurwinvoiew',
+ node
+def slackresponse = slackSend(channel: "#newethread01",
+	message: "kdwnvourwnvoiwrbnbnrwkbnrwbnurwinvoiew",
 	tokenCredentialId: 'usertoken'
 }
