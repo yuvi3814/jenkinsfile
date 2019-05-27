@@ -1,3 +1,21 @@
+node {
+    def attachments = [
+        [
+           pretext: 'jenkins message with attachement from Salck bot',
+            fallback: 'Message from jenkins.',
+            color: '#36a64f',
+			 text: 'View the above file',
+			author_name: 'Author: Yuvi Kun',
+			title: 'Slack API documentation',
+			title_link: 'https://api.slack.com/'
+        ]
+    ]
+
+    slackSend(channel: '#jenkins-pipeline-01', 
+    tokenCredentialId: 'bottoken', 
+    attachments: attachments
+    )
+}
 
 node {
     def attachments = [
@@ -13,11 +31,33 @@ node {
     ]
 
     slackSend(channel: '#jenkins-pipeline-01', 
-    tokenCredentialId: 'thread', 
+    tokenCredentialId: 'usertoken', 
     attachments: attachments
     )
 }
 
+
+node {
+def attachments = [
+        [
+           pretext: 'jenkins message with Attachement from user Yuvaraj',
+            fallback: 'Message from jenkinsfile.',
+            color: '#36a64f',
+			 text: 'View the above file',
+			author_name: 'Author: Yuvi_Kun',
+			title: 'Slack API documentation',
+			title_link: 'https://api.slack.com/',
+			
+        ]
+    ]   
+   def slackResponse = slackSend(channel: "jenkins-pipeline-01", 
+   attachments: attachments, 
+   tokenCredentialId: "bottoken", 
+   message: "message from user")
+   
+    slackSend(channel: slackResponse.threadId, message: "Thread reply 1010101")
+    slackSend(channel: slackResponse.threadId, message: "Thread reply #23232323232")
+}
 
 
 
@@ -43,6 +83,18 @@ def attachments = [
     slackSend(channel: slackResponse.threadId, message: "Thread reply #23232323232")
 }
 
+
+
+
+
+
+stage('Slack Notifications')
+ {
+	slackSend(channel: 'newthread04',
+	message:'changed message from user yuvaraj for newthread01 channel', 
+	tokenCredentialId: 'bottoken'
+	)
+}
 
 
 
