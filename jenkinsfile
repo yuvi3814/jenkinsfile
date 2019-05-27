@@ -37,6 +37,8 @@ node {
 }
 
 
+
+
 node {
 def attachments = [
         [
@@ -95,8 +97,6 @@ stage('Slack Notifications')
 	tokenCredentialId: 'bottoken'
 	)
 }
-
-
 
 
 
