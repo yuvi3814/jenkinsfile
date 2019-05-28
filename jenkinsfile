@@ -57,8 +57,8 @@ def attachments = [
    tokenCredentialId: "bottoken", 
    message: "message from user")
    
-    slackSend(channel: slackResponse.threadId, tokenCredentialId: "bottoken", message: "Thread reply 1010101")
-    slackSend(channel: slackResponse.threadId, tokenCredentialId: "bottoken", message: "Thread reply #23232323232")
+    slackSend(channel: slackResponse.threadId, tokenCredentialId: "bottoken", message: "Thread reply from *Jenkins_Bot*")
+    slackSend(channel: slackResponse.threadId, tokenCredentialId: "bottoken", message: "Thread reply *Jenkins_Bot*")
 }
 
 
@@ -81,8 +81,8 @@ def attachments = [
    tokenCredentialId: "usertoken", 
    message: "message from user")
    
-    slackSend(channel: slackResponse.threadId, tokenCredentialId: "usertoken", message: "Thread reply 1010101")
-    slackSend(channel: slackResponse.threadId, tokenCredentialId: "usertoken", message: "Thread reply #23232323232")
+    slackSend(channel: slackResponse.threadId, tokenCredentialId: "usertoken", message: "Thread reply *user Yuvaraj* ")
+    slackSend(channel: slackResponse.threadId, tokenCredentialId: "usertoken", message: "Thread reply *user Yuvaraj*")
 }
 
 
