@@ -52,7 +52,7 @@ def attachments = [
 			
         ]
     ]   
-   def slackResponse = slackSend(channel: "jenkins-pipeline-02", 
+   def slackResponse = slackSend(channel: "newthread01", 
    attachments: attachments, 
    tokenCredentialId: "bottoken", 
    message: "message from user")
@@ -76,7 +76,7 @@ def attachments = [
 			
         ]
     ]   
-   def slackResponse = slackSend(channel: "jenkins-pipeline-02", 
+   def slackResponse = slackSend(channel: "newthread01", 
    attachments: attachments, 
    tokenCredentialId: "usertoken", 
    message: "message from user")
@@ -92,7 +92,7 @@ def attachments = [
 
 stage('Slack Notifications')
  {
-	slackSend(channel: 'newthread01',
+	slackSend(channel: 'jenkins-pipeline-02',
 	message:'changed message from *Jenkins_Bot* for newthread01 channel', 
 	tokenCredentialId: 'bottoken'
 	)
@@ -102,7 +102,7 @@ stage('Slack Notifications')
 
 stage('Slack Notifications')
  {
-	slackSend(channel: 'newthread01',
+	slackSend(channel: 'jenkins-pipeline-02',
 	message:'changed message from *user yuvaraj* for newthread01 channel', 
 	tokenCredentialId: 'usertoken'
 	)
