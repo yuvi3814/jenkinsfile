@@ -1,7 +1,7 @@
 node {
     def attachments = [
         [
-           pretext: 'jenkins message with attachement from bot',
+           pretext: 'jenkins message with attachement from *Jenkins_Bot*',
             fallback: 'Message from jenkins',
             color: '#36a64f',
 			 text: 'View the above file',
@@ -20,7 +20,7 @@ node {
 node {
     def attachments = [
         [
-           pretext: 'jenkins message with attachement from User Yuvaraj',
+           pretext: 'jenkins message with attachement from User *Yuvaraj*',
             fallback: 'Message from jenkins.',
             color: '#36a64f',
 			 text: 'View the above file',
@@ -42,7 +42,7 @@ node {
 node {
 def attachments = [
         [
-           pretext: 'jenkins message with Attachement from Bot',
+           pretext: 'jenkins message with Attachement from *Jenkins_Bot*',
             fallback: 'Message from jenkinsfile.',
             color: '#36a64f',
 			 text: 'View the above file',
@@ -66,7 +66,7 @@ def attachments = [
 node {
 def attachments = [
         [
-           pretext: 'jenkins message with Attachement from user Yuvaraj',
+           pretext: 'jenkins message with Attachement from *user Yuvaraj*',
             fallback: 'Message from jenkinsfile.',
             color: '#36a64f',
 			 text: 'View the above file',
@@ -93,7 +93,7 @@ def attachments = [
 stage('Slack Notifications')
  {
 	slackSend(channel: 'newthread01',
-	message:'changed message from Bot for newthread01 channel', 
+	message:'changed message from *Jenkins_Bot* for newthread01 channel', 
 	tokenCredentialId: 'bottoken'
 	)
 }
@@ -103,7 +103,7 @@ stage('Slack Notifications')
 stage('Slack Notifications')
  {
 	slackSend(channel: 'newthread01',
-	message:'changed message from user yuvaraj for newthread01 channel', 
+	message:'changed message from *user yuvaraj* for newthread01 channel', 
 	tokenCredentialId: 'usertoken'
 	)
 }
